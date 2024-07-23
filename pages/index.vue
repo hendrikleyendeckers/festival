@@ -7,21 +7,10 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 let loading = ref(true);
 
-const { status, data: categories } = await useFetch('http://localhost:8000/api/festival-list', {
+const { status, data: categories } = await useFetch('https://api.hendrik.vip/api/festival-list', {
   server: false,
   lazy: true
 });
-
-const data = [{
-  name: 'Geld & Finanzen',
-  items: [{id: 1, value: 1}, {id: 2, value: 2}],
-}, {
-  name: 'Hygiene',
-  items: [{id: 3, value: 'Deo (Reisegröße)'}, {id: 4, value: 'Reiseset: Shampoo, Spülung etc.'}],
-}, {
-  name: 'Kleidung',
-  items: [{id: 5, value: 'Badesachen'}, {id: 6, value: 'Fleecepullover/-jacke'}],
-}];
 
 const checked = useStorage('checked', [])
 
