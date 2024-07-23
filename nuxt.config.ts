@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt"],
+  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxt/image'],
+  colorMode: {
+    classSuffix: ''
+  },
+  image: {
+    // Options
+  },
   shadcn: {
     /**
      * Prefix for all the imported component
